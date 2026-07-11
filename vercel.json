@@ -1,8 +1,11 @@
 {
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "services": {
+    "frontend": {
+      "rootDirectory": "frontend"
+    },
+    "backend": {
+      "rootDirectory": "backend"
     }
-  ]
+  }
 }
