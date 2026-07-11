@@ -1,0 +1,16 @@
+# Dependencies
+node_modules
+/dist
+/build
+
+# Logs and system generation
+*.log
+.system_generated/
+.gemini/
+
+# IDE / Editor config
+.vscode/
+.idea/
+.DS_Store
+.env.local
+.env.*.local
