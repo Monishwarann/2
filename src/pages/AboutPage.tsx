@@ -112,7 +112,7 @@ const AboutPage: React.FC = () => {
       color: "from-amber-500 to-orange-500",
       skills: [
         { name: "SOLIDWORKS", image: "/icons/solidworks (1).svg" },
-        { name: "CAD Design", image: "/icons/solidworks (1).svg" },
+        { name: "CAD Design", image: "/icons/cad.svg" },
         { name: "Autodesk Fusion 360", image: "/icons/fusion.svg" },
         { name: "CATIA", image: "/icons/catia.svg" },
       ],
@@ -129,7 +129,6 @@ const AboutPage: React.FC = () => {
       title: "Simulator",
       color: "from-violet-500 to-purple-500",
       skills: [
-        { name: "Simulations", image: "/icons/simulation.svg" },
         { name: "MATLAB", image: "/icons/matlab.svg" },
         { name: "Vehicle Dynamics", image: "/icons/dynamics.svg" },
       ],

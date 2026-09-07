@@ -1,12 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
-  <defs>
-    <linearGradient id="fusionGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FF5722"/>
-      <stop offset="50%" stop-color="#E64A19"/>
-      <stop offset="100%" stop-color="#D84315"/>
-    </linearGradient>
-  </defs>
-  <rect width="100" height="100" rx="20" fill="url(#fusionGrad)"/>
-  <path d="M25 25h50v12H38v13h32v12H38v25H25V25z" fill="#FFFFFF"/>
-  <path d="M55 45l15 15-15 15" stroke="#FFFFFF" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <!-- Background Dark Shadow Card with '360' text -->
+  <rect x="92" y="72" width="238" height="312" rx="28" fill="#7A2E00" />
+  <text x="211" y="355" font-family="'Segoe UI', Arial, sans-serif" font-weight="900" font-size="70" fill="#FFFFFF" text-anchor="middle">360</text>
+  
+  <!-- Left Side Parallelogram (Lighter Orange) -->
+  <path d="M68 45 L112 12 L112 276 L68 308 Z" fill="#FF9D4A" />
+  
+  <!-- Front Main Box (Bright Orange) -->
+  <path d="M112 12 H302 A18 18 0 0 1 320 30 V276 H112 Z" fill="#FF6600" />
+  
+  <!-- Large White 'F' -->
+  <text x="216" y="216" font-family="'Segoe UI', Arial, sans-serif" font-weight="900" font-size="200" fill="#FFFFFF" text-anchor="middle">F</text>
 </svg>

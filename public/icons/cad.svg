@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <!-- Background Dark Burgundy Shadow Card with 'CAD' text -->
+  <rect x="92" y="72" width="238" height="312" rx="28" fill="#6B0024" />
+  <text x="211" y="355" font-family="'Segoe UI', Arial, sans-serif" font-weight="900" font-size="64" fill="#FFFFFF" text-anchor="middle">CAD</text>
+  
+  <!-- Left Side Parallelogram (Lighter Magenta) -->
+  <path d="M68 45 L112 12 L112 276 L68 308 Z" fill="#FF5388" />
+  
+  <!-- Front Main Box (Vibrant Crimson) -->
+  <path d="M112 12 H302 A18 18 0 0 1 320 30 V276 H112 Z" fill="#E5004F" />
+  
+  <!-- Large White 'A' -->
+  <text x="216" y="216" font-family="'Segoe UI', Arial, sans-serif" font-weight="900" font-size="200" fill="#FFFFFF" text-anchor="middle">A</text>
+</svg>
