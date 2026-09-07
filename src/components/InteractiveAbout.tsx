@@ -15,11 +15,7 @@ const InteractiveAbout: React.FC = () => {
       content: (
         <div className="space-y-4">
           <p className="text-gray-300 leading-relaxed">
-            I'm a final-year Information Technology student at Meenakshi
-            Sundararajan Engineering College and the Founder of DANK
-            Technologies. I'm passionate about building privacy-first,
-            AI-powered SaaS products and crafting scalable, user-centric web
-            applications.
+           I’m a III-year Mechanical Engineering student at Meenakshi Sundararajan Engineering College, passionate about software and hardware development. I enjoy combining engineering knowledge with technology to build innovative, practical, and user-focused solutions.
           </p>
           <div className="flex flex-wrap gap-2 pt-2">
             {["React.js", "Next.js", "AI", "SaaS", "Full Stack"].map((tag) => (
@@ -43,9 +39,7 @@ const InteractiveAbout: React.FC = () => {
       content: (
         <div className="space-y-4">
           <p className="text-gray-300 leading-relaxed">
-            I'm driven by the ambition to build privacy-first, AI-powered
-            products that solve real-world problems through thoughtful design,
-            scalable engineering, and meaningful innovation.
+           I’m driven by the passion to combine software and hardware to create innovative solutions that solve real-world problems through engineering, technology, and meaningful innovation.
           </p>
           <div className="flex items-center gap-3 pt-2 text-violet-300">
             <Zap size={18} />

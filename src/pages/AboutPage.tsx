@@ -193,7 +193,9 @@ const AboutPage: React.FC = () => {
                   Monishwaran K
                 </h2>
                 <p className="text-xl lg:text-[16.5px] text-slate-400 leading-relaxed font-medium">
-                  Aspiring Software Developer |   Vibe Coder
+                  Aspiring Software Developer | Design Engineer
+                  <br />
+                  Vibe Coder
                 </p>
               </motion.div>
 
@@ -201,7 +203,7 @@ const AboutPage: React.FC = () => {
                 variants={itemVariants}
                 className="text-lg lg:text-base text-gray-300 leading-relaxed max-w-2xl"
               >
-                
+                Mechanical Engineering student and aspiring Software Developer skilled in React.js, Next.js, Python, and Java, passionate about building innovative solutions across engineering and technology.
               </motion.p>
 
               <motion.div
