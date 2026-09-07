@@ -106,6 +106,38 @@ const AboutPage: React.FC = () => {
     },
   ];
 
+  const hardwareCategories = [
+    {
+      title: "Design",
+      color: "from-amber-500 to-orange-500",
+      skills: [
+        { name: "SOLIDWORKS", image: "/icons/solidworks (1).svg" },
+        { name: "CAD Design", image: "/icons/solidworks (1).svg" },
+        { name: "Autodesk Fusion 360", image: "/icons/fusion.png" },
+        {name: "CATIA", image: "/icons/Catia.png"},
+        { name: "3D Modeling", image: "" },
+      ],
+    },
+    {
+      title: "IoT Systems",
+      color: "from-cyan-500 to-teal-500",
+      skills: [
+        { name: "IoT", image: "" },
+        { name: "Embedded Hardware", image: "" },
+        { name: "Sensors & Actuators", image: "" },
+      ],
+    },
+    {
+      title: "Simulator",
+      color: "from-violet-500 to-purple-500",
+      skills: [
+        { name: "Simulations", image: "" },
+        { name: "MATLAB", image: "" },
+        { name: "Vehicle Dynamics", image: "" },
+      ],
+    },
+  ];
+
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
 
   const containerVariants: Variants = {
@@ -281,7 +313,7 @@ const AboutPage: React.FC = () => {
             </motion.div>
           </div>
 
-          {/* Full Width Skills Section */}
+          {/* Full Width Developer Skills Section */}
           <motion.div
             variants={containerVariants}
             initial="hidden"
@@ -364,6 +396,99 @@ const AboutPage: React.FC = () => {
 
                         {/* Skill Name */}
                         <span className="text-[11px] sm:text-[13px] font-medium text-gray-400 group-hover/skill:text-cyan-300 text-center transition-colors duration-300 h-8 sm:h-9 flex items-start justify-center leading-snug w-full px-0.5">
+                          {skill.name}
+                        </span>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* Full Width Hardware Skills Section */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="relative py-12 sm:py-16 mt-4 sm:mt-8"
+          >
+            {/* Immersive Background glow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] max-w-5xl h-[120%] max-h-[1000px] bg-amber-500/10 blur-[120px] rounded-full pointer-events-none" />
+
+            <motion.div
+              variants={itemVariants}
+              className="relative z-10 text-center mb-12 sm:mb-16"
+            >
+              <h3 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-400 to-rose-400 mb-6 inline-block tracking-tight">
+                Hardware Skills
+              </h3>
+              <div className="h-1.5 w-32 bg-gradient-to-r from-amber-500 to-orange-500 rounded-full mx-auto" />
+            </motion.div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-10 xl:gap-12 relative z-10">
+              {hardwareCategories.map((category, categoryIndex) => (
+                <motion.div
+                  key={category.title}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{
+                    delay: categoryIndex * 0.1,
+                    duration: 0.7,
+                    type: "spring",
+                  }}
+                  className="relative group rounded-[2rem] p-6 sm:p-8 bg-gray-900/50 backdrop-blur-xl border border-gray-700/50 hover:border-amber-500/50 shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:shadow-[0_8px_30px_rgba(245,158,11,0.15)] transition-all duration-500 flex flex-col"
+                >
+                  {/* Hover Gradient Background */}
+                  <div className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+
+                  {/* Category Title */}
+                  <div className="flex items-center gap-4 mb-8 relative z-10">
+                    <div
+                      className={`h-12 w-1.5 bg-gradient-to-b ${category.color} rounded-full`}
+                    />
+                    <h4 className="text-xl sm:text-2xl font-bold text-white tracking-wide">
+                      {category.title}
+                    </h4>
+                  </div>
+
+                  {/* Skills Grid */}
+                  <div className="grid grid-cols-3 gap-4 sm:gap-5 relative z-10 flex-1 content-start">
+                    {category.skills.map((skill, skillIndex) => (
+                      <motion.div
+                        key={skill.name}
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        whileInView={{ opacity: 1, scale: 1 }}
+                        viewport={{ once: true }}
+                        transition={{
+                          delay: categoryIndex * 0.1 + skillIndex * 0.05,
+                          duration: 0.5,
+                          type: "spring",
+                        }}
+                        whileHover={{
+                          scale: 1.1,
+                          rotateZ: skillIndex % 2 === 0 ? 3 : -3,
+                          zIndex: 50,
+                        }}
+                        className="relative group/skill flex flex-col items-center gap-2.5"
+                      >
+                        {/* Skill Icon Container */}
+                        <div className="relative flex justify-center items-center w-16 h-16 sm:w-20 sm:h-20 rounded-2xl bg-gray-800/80 border border-gray-700/50 group-hover/skill:border-amber-400/50 shadow-inner group-hover/skill:shadow-[0_0_20px_rgba(245,158,11,0.3)] transition-all duration-300 overflow-hidden shrink-0">
+                          <div
+                            className={`absolute inset-0 bg-gradient-to-br ${category.color} opacity-0 group-hover/skill:opacity-15 transition-opacity duration-300`}
+                          />
+
+                          <SkillIcon
+                            src={skill.image}
+                            name={skill.name}
+                            categoryColor={category.color}
+                          />
+                        </div>
+
+                        {/* Skill Name */}
+                        <span className="text-[11px] sm:text-[13px] font-medium text-gray-400 group-hover/skill:text-amber-300 text-center transition-colors duration-300 h-8 sm:h-9 flex items-start justify-center leading-snug w-full px-0.5">
                           {skill.name}
                         </span>
                       </motion.div>

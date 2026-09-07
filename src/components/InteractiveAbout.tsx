@@ -18,7 +18,7 @@ const InteractiveAbout: React.FC = () => {
            I’m a III-year Mechanical Engineering student at Meenakshi Sundararajan Engineering College, passionate about software and hardware development. I enjoy combining engineering knowledge with technology to build innovative, practical, and user-focused solutions.
           </p>
           <div className="flex flex-wrap gap-2 pt-2">
-            {["React.js", "Next.js", "AI", "SaaS", "Full Stack"].map((tag) => (
+            {["React.js", "Next.js", "AI","Full Stack"].map((tag) => (
               <span
                 key={tag}
                 className="px-3 py-1 text-xs rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20"
