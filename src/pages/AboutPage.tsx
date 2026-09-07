@@ -28,7 +28,7 @@ const SkillIcon: React.FC<SkillIconProps> = ({ src, name, categoryColor }) => {
     );
   }
 
-  const isSolidworks = name === "SOLIDWORKS";
+  const isBiggerLogo = name === "SOLIDWORKS" || name === "CATIA" || name === "MATLAB" || name === "Arduino";
 
   return (
     <img
@@ -36,7 +36,7 @@ const SkillIcon: React.FC<SkillIconProps> = ({ src, name, categoryColor }) => {
       alt={name}
       loading="lazy"
       className={`${
-        isSolidworks
+        isBiggerLogo
           ? "w-12 h-12 sm:w-[3.25rem] sm:h-[3.25rem] scale-125"
           : "w-9 h-9 sm:w-11 sm:h-11"
       } object-contain drop-shadow-md group-hover/skill:drop-shadow-xl transition-transform duration-300 group-hover/skill:scale-110 relative z-10`}
