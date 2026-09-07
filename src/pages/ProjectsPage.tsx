@@ -16,7 +16,30 @@ import {
   X,
 } from "lucide-react";
 import SearchBar from "../components/SearchBar";
-import projects from "../data/projects.json";
+import projectsData from "../data/projects.json";
+
+interface Project {
+  id: number;
+  title: string;
+  category: string;
+  tags?: string[];
+  shortDesc: string;
+  longDesc: string;
+  challenge?: string;
+  approach?: string;
+  result?: string;
+  image: string;
+  images?: string[];
+  technologies: string[];
+  tech?: string[];
+  githubUrl?: string;
+  repoUrl?: string;
+  backendUrl?: string;
+  liveUrl?: string;
+  featured: boolean;
+}
+
+const projects: Project[] = projectsData as Project[];
 
 const ProjectsPage: React.FC = () => {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -34,13 +57,13 @@ const ProjectsPage: React.FC = () => {
     { id: "entertainment", label: "Entertainment", icon: Gamepad2 },
   ];
 
-  const filteredProjects = projects.filter((project) => {
+  const filteredProjects = projects.filter((project: Project) => {
     const matchesCategory =
       selectedCategory === "all" || project.category === selectedCategory;
     const matchesSearch =
       project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
       project.shortDesc.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      project.technologies.some((tech) =>
+      project.technologies.some((tech: string) =>
         tech.toLowerCase().includes(searchTerm.toLowerCase()),
       );
     return matchesCategory && matchesSearch;
@@ -67,9 +90,9 @@ const ProjectsPage: React.FC = () => {
   };
 
   const totalProjects = projects.length;
-  const featuredCount = projects.filter((p) => p.featured).length;
-  const openSourceCount = projects.filter((p) => p.githubUrl).length;
-  const uniqueTechs = new Set(projects.flatMap((p) => p.technologies));
+  const featuredCount = projects.filter((p: Project) => p.featured).length;
+  const openSourceCount = projects.filter((p: Project) => Boolean(p.githubUrl)).length;
+  const uniqueTechs = new Set(projects.flatMap((p: Project) => p.technologies));
   const techStacksCount = uniqueTechs.size;
 
   const stats = [
@@ -228,7 +251,7 @@ const ProjectsPage: React.FC = () => {
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8"
           >
             <AnimatePresence mode="popLayout">
-              {filteredProjects.map((project) => (
+              {filteredProjects.map((project: Project) => (
                 <motion.div
                   layout="position"
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -287,7 +310,7 @@ const ProjectsPage: React.FC = () => {
 
                       {/* Technologies */}
                       <div className="flex flex-wrap gap-2">
-                        {project.technologies.slice(0, 3).map((tech) => (
+                        {project.technologies.slice(0, 3).map((tech: string) => (
                           <span
                             key={tech}
                             className="text-xs px-3 py-1.5 rounded-lg bg-gradient-to-r from-purple-500/10 to-cyan-500/10 border border-purple-500/20 text-purple-300 group-hover:border-purple-400/40 transition-colors duration-300"
@@ -351,7 +374,7 @@ const ProjectsPage: React.FC = () => {
               onClick={(e) => e.stopPropagation()}
             >
               {(() => {
-                const project = projects.find((p) => p.id === selectedProject);
+                const project = projects.find((p: Project) => p.id === selectedProject);
                 if (!project) return null;
 
                 return (
@@ -395,7 +418,7 @@ const ProjectsPage: React.FC = () => {
                           Tech Stack
                         </h4>
                         <div className="flex flex-wrap gap-2">
-                          {project.technologies.map((tech) => (
+                          {project.technologies.map((tech: string) => (
                             <span
                               key={tech}
                               className="px-4 py-2 text-sm bg-gray-800/80 text-purple-300 rounded-xl border border-purple-500/30 hover:border-purple-400/50 transition-colors"

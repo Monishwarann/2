@@ -59,9 +59,7 @@ const InteractiveAbout: React.FC = () => {
       content: (
         <div className="space-y-4">
           <p className="text-gray-300 leading-relaxed">
-            I believe great software is built on simplicity, security, and
-            scalability. Every product should solve real problems while
-            delivering intuitive and meaningful user experiences.
+           I believe that great products are built on simplicity, security, and scalability, and every product should solve real problems while delivering intuitive and meaningful user experiences.
           </p>
           <div className="w-full bg-gray-800 rounded-full h-1.5 mt-4 overflow-hidden">
             <motion.div
@@ -71,37 +69,6 @@ const InteractiveAbout: React.FC = () => {
               className="h-full bg-gradient-to-r from-rose-400 to-orange-500"
             />
           </div>
-        </div>
-      ),
-    },
-    {
-      id: "vibe",
-      title: "Founder Mode",
-      icon: Terminal,
-      color: "from-emerald-400 to-teal-600",
-      bgGlow: "bg-emerald-500/20",
-      content: (
-        <div className="space-y-3 font-mono text-sm">
-          <div className="flex gap-2 items-center text-gray-400">
-            <span className="text-emerald-400">~</span>
-            <span>./launch_startup.sh</span>
-          </div>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-emerald-300"
-          >
-            &gt; Initializing DANK Technologies... ✓
-          </motion.p>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-            className="text-gray-300"
-          >
-            &gt; Building privacy-first AI products, leading development, and
-            turning ideas into impactful software.
-          </motion.p>
         </div>
       ),
     },

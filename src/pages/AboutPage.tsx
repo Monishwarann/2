@@ -482,8 +482,8 @@ const AboutPage: React.FC = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {[
-              { label: "Current Year", value: "4th Year" },
-              { label: "CGPA", value: "8.01" },
+              { label: "Current Year", value: "3rd Year" },
+              { label: "CGPA", value: "7.75" },
               { label: "Programming Languages", value: "2" },
               { label: "Open Source Contributions", value: "5+" },
             ].map((stat, index) => (
