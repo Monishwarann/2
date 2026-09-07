@@ -113,26 +113,25 @@ const AboutPage: React.FC = () => {
       skills: [
         { name: "SOLIDWORKS", image: "/icons/solidworks (1).svg" },
         { name: "CAD Design", image: "/icons/solidworks (1).svg" },
-        { name: "Autodesk Fusion 360", image: "/icons/fusion.png" },
-        { name: "CATIA", image: "/icons/Catia.png" },
+        { name: "Autodesk Fusion 360", image: "/icons/fusion.svg" },
+        { name: "CATIA", image: "/icons/catia.svg" },
       ],
     },
     {
       title: "IoT Systems",
       color: "from-cyan-500 to-teal-500",
       skills: [
-        { name: "IoT", image: "" },
-        { name: "Embedded Hardware", image: "" },
-        { name: "Sensors & Actuators", image: "" },
+        { name: "esp32", image: "/icons/esp32.svg" },
+        { name: "Arduino", image: "/icons/arduino.svg" },
       ],
     },
     {
       title: "Simulator",
       color: "from-violet-500 to-purple-500",
       skills: [
-        { name: "Simulations", image: "" },
-        { name: "MATLAB", image: "" },
-        { name: "Vehicle Dynamics", image: "" },
+        { name: "Simulations", image: "/icons/simulation.svg" },
+        { name: "MATLAB", image: "/icons/matlab.svg" },
+        { name: "Vehicle Dynamics", image: "/icons/dynamics.svg" },
       ],
     },
   ];

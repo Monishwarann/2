@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <linearGradient id="matlabGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#CB4335"/>
+      <stop offset="50%" stop-color="#E67E22"/>
+      <stop offset="100%" stop-color="#F1C40F"/>
+    </linearGradient>
+  </defs>
+  <rect width="100" height="100" rx="20" fill="#151B26"/>
+  <path d="M20 70 Q35 20 50 60 T80 30" fill="none" stroke="url(#matlabGrad)" stroke-width="6" stroke-linecap="round"/>
+  <path d="M20 70 L35 78 L50 60 L65 72 L80 30" fill="none" stroke="url(#matlabGrad)" stroke-width="2" opacity="0.6"/>
+</svg>
