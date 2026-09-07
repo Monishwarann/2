@@ -1,12 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="100%" height="100%">
   <defs>
-    <linearGradient id="matlabGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#CB4335"/>
-      <stop offset="50%" stop-color="#E67E22"/>
-      <stop offset="100%" stop-color="#F1C40F"/>
+    <linearGradient id="matlabSurf" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00BCD4"/>
+      <stop offset="30%" stop-color="#00ACC1"/>
+      <stop offset="65%" stop-color="#FF3D00"/>
+      <stop offset="100%" stop-color="#FFAB00"/>
     </linearGradient>
   </defs>
-  <rect width="100" height="100" rx="20" fill="#151B26"/>
-  <path d="M20 70 Q35 20 50 60 T80 30" fill="none" stroke="url(#matlabGrad)" stroke-width="6" stroke-linecap="round"/>
-  <path d="M20 70 L35 78 L50 60 L65 72 L80 30" fill="none" stroke="url(#matlabGrad)" stroke-width="2" opacity="0.6"/>
+  <!-- 3D L-shaped membrane surface peak -->
+  <path d="M165 40 Q215 110 225 170 Q160 200 115 155 Q60 130 55 120 C85 105 135 70 165 40 Z" fill="url(#matlabSurf)" stroke="#D84315" stroke-width="2"/>
+  <!-- Front curved fold -->
+  <path d="M115 155 Q145 185 225 170 Q165 90 165 40 Q115 130 115 155 Z" fill="#FF3D00" opacity="0.85"/>
+  <!-- Top peak highlight -->
+  <path d="M165 40 Q180 80 195 100 Q160 130 140 100 Z" fill="#FFC107" opacity="0.9"/>
+  <!-- MATLAB Text below -->
+  <text x="150" y="255" font-family="'Times New Roman', Georgia, serif" font-weight="bold" font-size="46" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">MATLAB</text>
 </svg>

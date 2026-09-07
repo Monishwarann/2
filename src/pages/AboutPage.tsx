@@ -115,6 +115,7 @@ const AboutPage: React.FC = () => {
         { name: "CAD Design", image: "/icons/cad.svg" },
         { name: "Autodesk Fusion 360", image: "/icons/fusion.svg" },
         { name: "CATIA", image: "/icons/catia.svg" },
+        { name: "MATLAB", image: "/icons/matlab.svg" },
       ],
     },
     {
@@ -125,15 +126,8 @@ const AboutPage: React.FC = () => {
         { name: "Arduino", image: "/icons/arduino.svg" },
       ],
     },
-    {
-      title: "Simulator",
-      color: "from-violet-500 to-purple-500",
-      skills: [
-        { name: "MATLAB", image: "/icons/matlab.svg" },
-        { name: "Vehicle Dynamics", image: "/icons/dynamics.svg" },
-      ],
-    },
   ];
+
 
   const [imageLoaded, setImageLoaded] = useState<boolean>(false);
 
@@ -537,14 +531,14 @@ const AboutPage: React.FC = () => {
                   },
                   {
                     area: "Backend Development",
-                    percentage: 40,
+                    percentage: 50,
                     description: "Node.js, Python (Flask), APIs",
                   },
                   {
                     area: "Database Management",
-                    percentage: 75,
+                    percentage: 60,
                     description:
-                      "MySQL, PostgreSQL, Firebase, Supabase, Convex, Strapi CMS",
+                      "MySQL, PostgreSQL, Firebase, MongoDB",
                   },
                 ].map((item, index) => (
                   <motion.div
