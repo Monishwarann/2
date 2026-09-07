@@ -99,7 +99,8 @@ const Footer: React.FC = () => {
               />
             </div>
             <p className="text-gray-400 mb-3 sm:mb-4 max-w-md text-xs sm:text-sm md:text-base">
-              Aspiring Software Developer & Meta Certified Front-End Developer
+              Aspiring Software Developer & combining Mechanical Engineering with software and hardware technologies.
+
             </p>
             <div className="flex items-center gap-2 sm:gap-3">
               {socialLinks.map((social) => (
