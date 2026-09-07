@@ -28,12 +28,18 @@ const SkillIcon: React.FC<SkillIconProps> = ({ src, name, categoryColor }) => {
     );
   }
 
+  const isSolidworks = name === "SOLIDWORKS";
+
   return (
     <img
       src={src}
       alt={name}
       loading="lazy"
-      className="w-9 h-9 sm:w-11 sm:h-11 object-contain drop-shadow-md group-hover/skill:drop-shadow-xl transition-transform duration-300 group-hover/skill:scale-110 relative z-10"
+      className={`${
+        isSolidworks
+          ? "w-12 h-12 sm:w-[3.25rem] sm:h-[3.25rem] scale-125"
+          : "w-9 h-9 sm:w-11 sm:h-11"
+      } object-contain drop-shadow-md group-hover/skill:drop-shadow-xl transition-transform duration-300 group-hover/skill:scale-110 relative z-10`}
       onError={() => setHasError(true)}
     />
   );
@@ -111,7 +117,7 @@ const AboutPage: React.FC = () => {
       title: "Design",
       color: "from-amber-500 to-orange-500",
       skills: [
-        { name: "SOLIDWORKS", image: "/icons/solidworks.webp" },
+        { name: "SOLIDWORKS", image: "/icons/solidworks (1).svg" },
         { name: "CAD Design", image: "/icons/cad.webp" },
         { name: "Autodesk Fusion 360", image: "/icons/fusion.webp" },
         { name: "CATIA", image: "/icons/catia.webp" },
