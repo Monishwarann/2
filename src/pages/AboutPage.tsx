@@ -114,8 +114,7 @@ const AboutPage: React.FC = () => {
         { name: "SOLIDWORKS", image: "/icons/solidworks (1).svg" },
         { name: "CAD Design", image: "/icons/solidworks (1).svg" },
         { name: "Autodesk Fusion 360", image: "/icons/fusion.png" },
-        {name: "CATIA", image: "/icons/Catia.png"},
-        { name: "3D Modeling", image: "" },
+        { name: "CATIA", image: "/icons/Catia.png" },
       ],
     },
     {
