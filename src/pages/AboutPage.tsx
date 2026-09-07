@@ -118,8 +118,8 @@ const AboutPage: React.FC = () => {
       color: "from-amber-500 to-orange-500",
       skills: [
         { name: "SOLIDWORKS", image: "/icons/solidworks (1).svg" },
-        { name: "CAD Design", image: "/icons/cad.webp" },
-        { name: "Autodesk Fusion 360", image: "/icons/fusion.webp" },
+        { name: "CAD Design", image: "/icons/fusion.webp" },
+        { name: "Autodesk Fusion 360", image: "/icons/cad.webp" },
         { name: "CATIA", image: "/icons/catia.webp" },
         { name: "MATLAB", image: "/icons/matlab.webp" },
       ],
