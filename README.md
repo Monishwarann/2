@@ -112,10 +112,10 @@ graph TD
 ### Installation & Local Development
 ```bash
 # Clone the repository
-git clone https://github.com/dharunkumar-sh/dharun-portfolio.git
+git clone https://github.com/Monishwarann
 
 # Enter the directory
-cd dharun-portfolio
+cd moni
 
 # Install dependencies
 npm install
@@ -140,10 +140,10 @@ The project is containerized for consistent deployment across any environment.
 
 ```bash
 # Build the image
-docker build -t dharun-portfolio .
+docker build -t Monishwaran K-portfolio .
 
 # Run the container
-docker run -p 80:80 dharun-portfolio
+docker run -p 80:80 Monishwaran K-portfolio
 ```
 
 ---
@@ -172,5 +172,5 @@ This project is proprietary. All rights reserved.
 
 <div align="center">
   <br />
-  <sub>Built with ❤️ by <a href="https://github.com/dharunkumar-sh">Monishwaran K</a></sub>
+  <sub>Built with ❤️ by <a href="https://github.com/Monishwarann">Monishwaran K</a></sub>
 </div>

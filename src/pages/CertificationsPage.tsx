@@ -13,7 +13,6 @@ import {
   LayoutGrid,
   Trophy,
   Briefcase,
-  Award,
 } from "lucide-react";
 import SearchBar from "../components/SearchBar";
 import certifications from "../data/certifications.json";
@@ -28,6 +27,7 @@ interface Certification {
   verifyUrl: string;
   skills: string[];
   category: string;
+  fullSize?: boolean;
 }
 
 const CertificationsPage: React.FC = () => {
@@ -85,7 +85,6 @@ const CertificationsPage: React.FC = () => {
     { id: "all", label: "All", icon: LayoutGrid },
     { id: "hackathon", label: "Hackathons", icon: Trophy },
     { id: "internship", label: "Internships", icon: Briefcase },
-    { id: "symposium", label: "Symposium Events", icon: Award },
     { id: "course", label: "Courses", icon: GraduationCap },
   ];
 
@@ -276,12 +275,20 @@ const CertificationsPage: React.FC = () => {
                     <div className="flex items-start gap-4 mb-5">
                       <div className="relative flex-shrink-0">
                         <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-xl blur-md opacity-50 group-hover:opacity-70 transition-opacity duration-300" />
-                        <div className="relative w-14 h-14 rounded-xl bg-gray-900 border border-gray-700 overflow-hidden">
+                        <div
+                          className={`relative w-14 h-14 rounded-xl bg-gray-900 border border-gray-700 overflow-hidden ${
+                            cert.fullSize
+                              ? "p-0"
+                              : "flex items-center justify-center p-1.5"
+                          }`}
+                        >
                           <img
                             src={cert.logo}
                             alt={cert.issuer}
                             loading="lazy"
-                            className="w-full h-full object-cover"
+                            className={`w-full h-full ${
+                              cert.fullSize ? "object-cover" : "object-contain"
+                            }`}
                           />
                         </div>
                       </div>
@@ -370,8 +377,23 @@ const CertificationsPage: React.FC = () => {
               {/* Modal Header */}
               <div className="relative flex justify-between items-center px-6 py-4 bg-gradient-to-r from-gray-800/80 to-gray-900/80 border-b border-gray-700/50 backdrop-blur-xl">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-lg bg-gradient-to-r from-cyan-500 to-violet-500 flex items-center justify-center">
-                    <BadgeCheck className="w-5 h-5 text-white" />
+                  <div className="relative flex-shrink-0">
+                    <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-violet-500 rounded-lg blur-sm opacity-50" />
+                    <div
+                      className={`relative w-10 h-10 rounded-lg bg-gray-900 border border-gray-700 overflow-hidden ${
+                        selectedCert.fullSize
+                          ? "p-0"
+                          : "flex items-center justify-center p-1"
+                      }`}
+                    >
+                      <img
+                        src={selectedCert.logo}
+                        alt={selectedCert.issuer}
+                        className={`w-full h-full ${
+                          selectedCert.fullSize ? "object-cover" : "object-contain"
+                        }`}
+                      />
+                    </div>
                   </div>
                   <div>
                     <h2 className="text-white text-lg font-semibold line-clamp-1">

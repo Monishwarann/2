@@ -5,7 +5,7 @@
     "issuer": "MongoDB",
     "date": "2025",
     "logo": "/mongodb.webp",
-    "verifyUrl": "/Schema Design Optimization-CHBKUl2C_p1.webp",
+    "verifyUrl": "/Certificates/sch.webp",
     "skills": [
       "MongoDB",
       "Schema Design",
@@ -54,7 +54,8 @@
       "Business Insights",
       "Data Analysis"
     ],
-    "category": "course"
+    "category": "course",
+    "fullSize": true
   },
   {
     "id": 5,
@@ -62,12 +63,13 @@
     "issuer": "NSDC & Reliance Foundation",
     "date": "2025",
     "logo": "/icons/3.webp",
-    "verifyUrl": "/Certificates/certificate-python-.webp",
+    "verifyUrl": "/Certificates/iot.webp",
     "skills": [
       "IoT",
       "Networking","Embedded Systems"
     ],
-    "category": "course"
+    "category": "course",
+    "fullSize": true
   },
   {
     "id": 6,
@@ -75,14 +77,15 @@
     "issuer": "IBM",
     "date": "2025",
     "logo": "/icons/python.webp",
-    "verifyUrl": "/Certificates/Certificate-of-Completion-ibm.webp",
+    "verifyUrl": "/Certificates/ibm.webp",
     "skills": [
       "Python",
       "Data Science",
       "Pandas",
       "NumPy"
     ],
-    "category": "course"
+    "category": "course",
+    "fullSize": true
   },
   {
     "id": 8,
@@ -90,7 +93,7 @@
     "issuer": "Tech Mahindra & NSDC",
     "date": "2025",
     "logo": "/icons/Tech_Mahindra-Logo.wine.webp",
-    "verifyUrl": "/Certificates/certificate-cyber-sercity.webp",
+    "verifyUrl": "/Certificates/cyber-sercity.webp",
     "skills": [
       "Cyber Security",
       "Network Security",
@@ -103,7 +106,7 @@
     "title": "Google Certification For Students",
     "issuer": "Google",
     "date": "2025",
-    "logo": "/icons/google.webp",
+    "logo": "/google.webp",
     "verifyUrl": "/Certificates/certificate-google_p1.webp",
     "skills": [
       "AI",
@@ -112,19 +115,35 @@
     ],
     "category": "course"
   },
+    {
+    "id": 20,
+    "title": "Drone Workshop",
+    "issuer": "Meenakshi Sundararajan Engineering College",
+    "date": "2025",
+    "logo": "/icons/2.webp",
+    "verifyUrl": "/Certificates/ece-sympo.webp",
+    "skills": [
+      "Drones",
+      "Control Systems",
+      "Flight Mechanics"
+    ],
+    "category": "workshop",
+    "fullSize": true
+  },
   {
     "id": 10,
     "title": "Advanced Prompt Engineering with ChatGPT",
     "issuer": "upGrad",
     "date": "2026",
     "logo": "/icons/5.webp",
-    "verifyUrl": "/Certificates/10.webp",
+    "verifyUrl": "/1767613599982.webp",
     "skills": [
       "Prompt Engineering",
       "ChatGPT",
       "Generative AI"
     ],
-    "category": "course"
+    "category": "course",
+    "fullSize": true
   },
   {
     "id": 11,
@@ -132,14 +151,15 @@
     "issuer": "Reliance Foundation & NSDC",
     "date": "2026",
     "logo": "/icons/3.webp",
-    "verifyUrl": "/Certificates/Certificate of Completion-frontend_p1.webp",
+    "verifyUrl": "/Certificates/front-end .webp",
     "skills": [
       "HTML",
       "CSS",
       "JavaScript",
       "Responsive Design"
     ],
-    "category": "course"
+    "category": "course",
+    "fullSize": true
   },
   {
     "id": 13,
@@ -147,49 +167,22 @@
     "issuer": "Meenakshi Sundararajan Engineering College",
     "date": "2026",
     "logo": "/icons/2.webp",
-    "verifyUrl": "/Certificates/16.webp",
+    "verifyUrl": "/Certificates/innoverse.webp",
     "skills": [
       "IOT",
       "Hardware Integration",
       "Prototyping"
     ],
-    "category": "hackathon"
-  },
-  {
-    "id": 14,
-    "title": "Brainstormers Mini Hackathon",
-    "issuer": "Meenakshi Sundararajan Engineering College",
-    "date": "2026",
-    "logo": "/icons/4.webp",
-    "verifyUrl": "/Certificates/16.webp",
-    "skills": [
-      "Product Development",
-      "Design Thinking",
-      "Innovation"
-    ],
-    "category": "hackathon"
-  },
-  {
-    "id": 15,
-    "title": "Code Nexus Hackathon",
-    "issuer": "Meenakshi Sundararajan Engineering College",
-    "date": "2026",
-    "logo": "/icons/2.webp",
-    "verifyUrl": "/posters/14.webp",
-    "skills": [
-      "IT",
-      "Software Development",
-      "Problem Solving"
-    ],
-    "category": "hackathon"
+    "category": "hackathon",
+    "fullSize": true
   },
   {
     "id": 19,
     "title": "Industrial Internship",
     "issuer": "Maiiyam Engineering",
     "date": "2026",
-    "logo": "/logo.svg",
-    "verifyUrl": "/Certificates/16.webp",
+    "logo": "/icons/maiyyam.webp",
+    "verifyUrl": "/fh.webp",
     "skills": [
       "Industrial Exposure",
       "Mechanical Engineering",
@@ -198,26 +191,12 @@
     "category": "internship"
   },
   {
-    "id": 20,
-    "title": "Drone Workshop & Control Systems",
-    "issuer": "Meenakshi Sundararajan Engineering College",
-    "date": "2025",
-    "logo": "/logo.svg",
-    "verifyUrl": "/Certificates/16.webp",
-    "skills": [
-      "Drones",
-      "Control Systems",
-      "Flight Mechanics"
-    ],
-    "category": "workshop"
-  },
-  {
     "id": 21,
     "title": "SOAR - AI to be Aware",
     "issuer": "HCL Technologies Ltd, NSDC",
     "date": "2026",
     "logo": "https://cdn.simpleicons.org/hcl/000000",
-    "verifyUrl": "/output.webp",
+    "verifyUrl": "/Certificates/certificate_a246c1f3-b894-400e-a0ff-97931bf85e3c.webp",
     "skills": [
       "AI Awareness",
       "Embedded Assessment",
@@ -231,7 +210,7 @@
     "issuer": "NPTEL",
     "date": "2026",
     "logo": "/icons/nptel.webp",
-    "verifyUrl": "/nptel",
+    "verifyUrl": "/Certificates/1779094096170.webp",
     "skills": [
       "Java",
       "Programming",

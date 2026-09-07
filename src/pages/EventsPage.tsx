@@ -11,13 +11,46 @@ import {
   Award,
   Briefcase,
   GraduationCap,
+  MapPin,
+  X,
+  ExternalLink,
 } from "lucide-react";
 import SearchBar from "../components/SearchBar";
 import events from "../data/events.json";
 
+interface EventItem {
+  id: number;
+  title: string;
+  type: string;
+  role: string;
+  date: string;
+  location: string;
+  description: string;
+  achievement?: string;
+  image: string;
+  technologies: string[];
+  duration?: string;
+  prize?: string;
+  featured?: boolean;
+  certificateUrl?: string;
+}
+
 const EventsPage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedEvent, setSelectedEvent] = useState<EventItem | null>(null);
+  const [showModal, setShowModal] = useState(false);
+
+  const openModal = (event: EventItem) => {
+    setSelectedEvent(event);
+    setShowModal(true);
+  };
+
+  const closeModal = () => {
+    setShowModal(false);
+    setSelectedEvent(null);
+  };
+
   const handleSearchChange = (value: string) => {
     setSearchTerm(value);
   };
@@ -241,7 +274,8 @@ const EventsPage: React.FC = () => {
                 }}
                 whileHover={{ y: -8, scale: 1.02 }}
                 key={event.id}
-                className="group relative"
+                onClick={() => openModal(event)}
+                className="group relative cursor-pointer"
               >
                 {/* Glow Effect */}
                 <div className="absolute -inset-1 bg-gradient-to-r from-cyan-500 via-violet-500 to-pink-500 rounded-3xl opacity-0 group-hover:opacity-30 blur-xl transition-all duration-500" />
@@ -358,6 +392,139 @@ const EventsPage: React.FC = () => {
           )}
         </div>
       </section>
+
+      {/* Event Details Modal */}
+      <AnimatePresence>
+        {showModal && selectedEvent && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/80 backdrop-blur-md flex items-center justify-center px-4 pt-20 pb-4"
+            onClick={closeModal}
+          >
+            <motion.div
+              initial={{ scale: 0.9, opacity: 0, y: 50 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 50 }}
+              transition={{ duration: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 rounded-2xl shadow-2xl w-full max-w-4xl max-h-[85vh] overflow-y-auto border border-gray-700/50"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {/* Modal Header */}
+              <div className="relative flex justify-between items-center px-6 py-4 bg-gradient-to-r from-gray-800/80 to-gray-900/80 border-b border-gray-700/50 backdrop-blur-xl">
+                <div className="flex items-center gap-3">
+                  <div className="px-3 py-1 bg-gray-900/80 rounded-lg text-xs font-medium text-cyan-400 border border-cyan-500/30">
+                    {selectedEvent.type.charAt(0).toUpperCase() + selectedEvent.type.slice(1)}
+                  </div>
+                  <div className={`px-3 py-1 bg-gradient-to-r ${getRoleColor(selectedEvent.role)} rounded-lg text-xs font-medium text-white`}>
+                    {selectedEvent.role}
+                  </div>
+                </div>
+                <motion.button
+                  onClick={closeModal}
+                  whileHover={{ scale: 1.1, rotate: 90 }}
+                  whileTap={{ scale: 0.9 }}
+                  className="w-10 h-10 rounded-xl bg-red-500/20 hover:bg-red-500 border border-red-500/30 hover:border-red-500 text-red-400 hover:text-white flex items-center justify-center transition-all duration-300"
+                >
+                  <X className="w-5 h-5" strokeWidth={2.5} />
+                </motion.button>
+              </div>
+
+              {/* Modal Banner Image */}
+              <div className="relative h-64 sm:h-80 w-full overflow-hidden bg-gray-950">
+                <img
+                  src={selectedEvent.certificateUrl || selectedEvent.image}
+                  alt={selectedEvent.title}
+                  className="w-full h-full object-contain sm:object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40 to-transparent" />
+                <div className="absolute bottom-6 left-6 right-6">
+                  <h2 className="text-2xl sm:text-3xl font-bold text-white drop-shadow-md">
+                    {selectedEvent.title}
+                  </h2>
+                  {selectedEvent.achievement && (
+                    <div className="mt-2 inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/20 border border-yellow-500/40 text-yellow-300 text-sm font-semibold">
+                      <Trophy size={14} className="text-yellow-400" />
+                      {selectedEvent.achievement}
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {/* Modal Content */}
+              <div className="p-6 sm:p-8 space-y-6">
+                {/* Meta Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4 rounded-xl bg-gray-800/50 border border-gray-700/50">
+                  <div className="flex items-center gap-3">
+                    <Calendar className="w-5 h-5 text-cyan-400" />
+                    <div>
+                      <p className="text-xs text-gray-400">Date</p>
+                      <p className="text-sm font-medium text-white">{selectedEvent.date}</p>
+                    </div>
+                  </div>
+                  {selectedEvent.location && (
+                    <div className="flex items-center gap-3">
+                      <MapPin className="w-5 h-5 text-violet-400" />
+                      <div>
+                        <p className="text-xs text-gray-400">Location</p>
+                        <p className="text-sm font-medium text-white">{selectedEvent.location}</p>
+                      </div>
+                    </div>
+                  )}
+                  {selectedEvent.duration && (
+                    <div className="flex items-center gap-3">
+                      <Timer className="w-5 h-5 text-pink-400" />
+                      <div>
+                        <p className="text-xs text-gray-400">Duration</p>
+                        <p className="text-sm font-medium text-white">{selectedEvent.duration}</p>
+                      </div>
+                    </div>
+                  )}
+                </div>
+
+                {/* Overview */}
+                <div>
+                  <h4 className="text-white font-semibold mb-2 text-base">Overview</h4>
+                  <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
+                    {selectedEvent.description}
+                  </p>
+                </div>
+
+                {/* Technologies */}
+                <div>
+                  <h4 className="text-cyan-400 font-semibold mb-3 text-sm">Technologies & Skills</h4>
+                  <div className="flex flex-wrap gap-2">
+                    {selectedEvent.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1.5 text-xs bg-gradient-to-r from-cyan-500/10 to-violet-500/10 border border-cyan-500/20 text-cyan-300 rounded-lg"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Certificate Link / View Button */}
+                {selectedEvent.certificateUrl && (
+                  <div className="pt-2 flex justify-end">
+                    <a
+                      href={selectedEvent.certificateUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-cyan-600 to-violet-600 hover:from-cyan-500 hover:to-violet-500 text-white text-sm font-semibold transition-all duration-300 shadow-lg shadow-cyan-500/20"
+                    >
+                      <ExternalLink size={16} />
+                      View Certificate / Media
+                    </a>
+                  </div>
+                )}
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };

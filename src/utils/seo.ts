@@ -34,7 +34,7 @@ const seoByPath: Record<string, PageSEO> = {
       "React.js & Next.js developer Monishwaran K specializes in TypeScript, Tailwind CSS, UI/UX, and high-performance responsive web applications.",
     keywords: [
       "Monishwaran K",
-      "about Dharun Kumar",
+      "about Monishwaran K",
       "React developer bio",
       "Next.js specialist",
       "TypeScript developer",
@@ -56,7 +56,7 @@ const seoByPath: Record<string, PageSEO> = {
     image: defaultImage,
   },
   "/projects": {
-    title: "Projects | Dharun Kumar - Software Developer",
+    title: "Projects | Monishwaran K - Software Developer",
     description:
       "Browse projects spanning React, Next.js, AI tools, image generation, resume analyzers, and IoT dashboards built with modern web stacks.",
     keywords: [
@@ -70,7 +70,7 @@ const seoByPath: Record<string, PageSEO> = {
     image: defaultImage,
   },
   "/certifications": {
-    title: "Certifications & Achievements | Dharun Kumar - Software Developer",
+    title: "Certifications & Achievements | Monishwaran K - Software Developer",
     description:
       "Verified certifications, workshops, internships, and hackathon achievements covering Flutter, React, AI, RAG, and cloud skills.",
     keywords: [
@@ -83,7 +83,7 @@ const seoByPath: Record<string, PageSEO> = {
     image: defaultImage,
   },
   "/events": {
-    title: "Events & Hackathons | Dharun Kumar - Software Developer",
+    title: "Events & Hackathons | Monishwaran K - Software Developer",
     description:
       "Participation across hackathons, workshops, and competitions with AI, web, and UI/UX projects, including winning entries and team roles.",
     keywords: [
@@ -96,11 +96,11 @@ const seoByPath: Record<string, PageSEO> = {
     image: defaultImage,
   },
   "/contact": {
-    title: "Contact | Dharun Kumar - Software Developer",
+    title: "Contact | Monishwaran K - Software Developer",
     description:
-      "Reach out to Dharun Kumar for collaboration, inquiries, or web project discussions. Let's connect and build something great together",
+      "Reach out to Monishwaran K for collaboration, inquiries, or web project discussions. Let's connect and build something great together",
     keywords: [
-      "contact Dharun Kumar",
+      "contact Monishwaran K",
       "hire React developer",
       "collaboration",
       "portfolio contact",
@@ -108,9 +108,9 @@ const seoByPath: Record<string, PageSEO> = {
     image: defaultImage,
   },
   "/stats": {
-    title: "GitHub Stats | Dharun Kumar - Live Developer Statistics",
+    title: "GitHub Stats | Monishwaran K - Live Developer Statistics",
     description:
-      "Real-time GitHub statistics and developer analytics for Dharun Kumar. Track coding activity, repository insights, and open-source contributions live.",
+      "Real-time GitHub statistics and developer analytics for Monishwaran K. Track coding activity, repository insights, and open-source contributions live.",
     keywords: [
       "GitHub statistics",
       "developer analytics",

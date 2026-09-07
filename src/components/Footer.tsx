@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, Variants } from "framer-motion";
-import { Github, Linkedin, Instagram, CreditCard } from "lucide-react";
+import { Github, Linkedin, Instagram } from "lucide-react";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
             variants={itemVariants}
             className="col-span-2 sm:col-span-2"
           >
-            <div className="flex items-center mb-3">
+            <div className="flex items-center mb-2">
               <img
                 src="/logo.png"
                 alt="Logo"
@@ -99,8 +99,7 @@ const Footer: React.FC = () => {
               />
             </div>
             <p className="text-gray-400 mb-3 sm:mb-4 max-w-md text-xs sm:text-sm md:text-base">
-              Meta Certified Frontend Developer with expertise in React.js and
-              Next.js.
+              Aspiring Software Developer & Meta Certified Front-End Developer
             </p>
             <div className="flex items-center gap-2 sm:gap-3">
               {socialLinks.map((social) => (

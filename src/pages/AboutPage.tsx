@@ -193,8 +193,7 @@ const AboutPage: React.FC = () => {
                   Monishwaran K
                 </h2>
                 <p className="text-xl lg:text-[16.5px] text-slate-400 leading-relaxed font-medium">
-                  Aspiring Software Developer | Meta Certified Front-End Dev |
-                  Vibe Coder
+                  Aspiring Software Developer |   Vibe Coder
                 </p>
               </motion.div>
 
@@ -202,11 +201,7 @@ const AboutPage: React.FC = () => {
                 variants={itemVariants}
                 className="text-lg lg:text-base text-gray-300 leading-relaxed max-w-2xl"
               >
-                Meta Certified Front-End Developer and aspiring Software
-                Developer with expertise in React.js and Next.js. Passionate
-                about building modern, scalable, and user-friendly web
-                applications with clean design and efficient development
-                practices.
+                
               </motion.p>
 
               <motion.div

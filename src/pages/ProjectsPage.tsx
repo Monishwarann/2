@@ -39,7 +39,7 @@ const ProjectsPage: React.FC = () => {
       selectedCategory === "all" || project.category === selectedCategory;
     const matchesSearch =
       project.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      project.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      project.shortDesc.toLowerCase().includes(searchTerm.toLowerCase()) ||
       project.technologies.some((tech) =>
         tech.toLowerCase().includes(searchTerm.toLowerCase()),
       );
@@ -282,7 +282,7 @@ const ProjectsPage: React.FC = () => {
                         {project.title}
                       </h3>
                       <p className="text-gray-400 text-sm mb-4 line-clamp-2">
-                        {project.description}
+                        {project.shortDesc}
                       </p>
 
                       {/* Technologies */}
@@ -386,7 +386,7 @@ const ProjectsPage: React.FC = () => {
                     {/* Content Body */}
                     <div className="px-6 py-6 sm:px-8 sm:py-8 space-y-6">
                       <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                        {project.longDescription}
+                        {project.longDesc}
                       </p>
 
                       <div>
