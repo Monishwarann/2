@@ -2,7 +2,6 @@ import React, { useCallback, useMemo, useRef, useState } from "react";
 import { motion, Variants, AnimatePresence } from "framer-motion";
 import {
   GraduationCap,
-  Target,
   Code,
   Zap,
   ChevronRight,

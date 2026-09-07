@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Brain, Rocket, Terminal, Heart, Zap } from "lucide-react";
+import { Brain, Rocket, Heart, Zap } from "lucide-react";
 
 const InteractiveAbout: React.FC = () => {
   const [activeCard, setActiveCard] = useState<string>("journey");
