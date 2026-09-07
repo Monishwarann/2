@@ -1,10 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
-  <defs>
-    <linearGradient id="catiaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00539B"/>
-      <stop offset="100%" stop-color="#002F6C"/>
-    </linearGradient>
-  </defs>
-  <rect width="100" height="100" rx="20" fill="url(#catiaGrad)"/>
-  <text x="50" y="58" font-family="Arial, sans-serif" font-weight="900" font-size="22" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">CATIA</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="100%" height="100%">
+  <!-- 3DS Brand Mark -->
+  <g transform="translate(40, 10)">
+    <!-- Red top crescent -->
+    <path d="M140 30 C110 30 110 65 175 80 C155 100 120 125 145 110 C175 95 185 60 140 30 Z" fill="#E52421"/>
+    <!-- Blue left D loop -->
+    <path d="M90 125 C120 110 165 125 145 155 C125 185 70 210 80 210 C100 210 160 155 145 140 C130 125 100 135 90 125 Z" fill="#4154F6"/>
+    <path d="M80 210 C100 170 130 120 155 115 C135 145 105 185 80 210 Z" fill="#4154F6"/>
+    <!-- Orange right S loop -->
+    <path d="M165 100 C195 95 225 100 210 115 C190 130 165 145 180 165 C190 180 220 185 155 190 C195 185 210 170 195 155 C180 140 205 120 165 100 Z" fill="#F57C00"/>
+  </g>
+  <!-- CATIA Text -->
+  <text x="200" y="260" font-family="'Segoe UI', Arial, sans-serif" font-weight="900" font-style="italic" font-size="52" fill="#FFFFFF" text-anchor="middle" letter-spacing="3">CATIA</text>
 </svg>
