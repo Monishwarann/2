@@ -15,8 +15,8 @@
     </linearGradient>
   </defs>
 
-  <!-- Circular Outer Glow & Background Badge -->
-  <circle cx="250" cy="250" r="240" fill="url(#circleBg)" stroke="url(#ringBorder)" stroke-width="8" />
+  
+  
 
   <!-- Clipped M Logo -->
   <g clip-path="url(#circleClip)">
