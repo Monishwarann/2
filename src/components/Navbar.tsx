@@ -70,9 +70,9 @@ const Navbar: React.FC = () => {
               <Link to="/" className="flex items-center" onClick={() => setIsOpen(false)}>
                 <img
                   src="/logo.png"
-                  alt="Logo"
+                  alt="Monishwaran K Logo"
                   loading="lazy"
-                  className="h-5 sm:h-6 w-auto object-contain"
+                  className="h-6 sm:h-7 md:h-8 w-auto object-contain"
                 />
               </Link>
             </motion.div>

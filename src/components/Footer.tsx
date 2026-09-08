@@ -93,7 +93,7 @@ const Footer: React.FC = () => {
             <div className="flex items-center mb-2">
               <img
                 src="/logo.png"
-                alt="Logo"
+                alt="Monishwaran K Logo"
                 loading="lazy"
                 className="h-7 sm:h-8 md:h-9 w-auto object-contain object-left"
               />
